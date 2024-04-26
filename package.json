@@ -4,7 +4,7 @@
   "description": "it is the backend part of the Garments website",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "Nobody",
   "license": "ISC",
