@@ -8,7 +8,7 @@ import paymentRouter from './routes/paymentRouter.js';
 const app = express();
 dotenv.config({path:'./config.env'});
 app.use(cors({
-    origin:['http://localhost:3000','*'],
+    origin:['https://petstore-5myt.onrender.com','*'],
     credentials:true
 }))
 app.use(express.json({ limit: '50mb' }));
