@@ -106,7 +106,12 @@ router.post('/addproduct',async(req,res)=>{
 })
 router.get('/logout',(req,res)=>{
     
-    res.clearCookie('authToken',{domain:'localhost',path:'/'});
+    res.clearCookie('authToken', {
+        domain: '.onrender.com',  // Matches all subdomains of onrender.com
+        path: '/',                // Ensure this matches the path you initially set the cookie with
+        secure: true,             // Secure flag for HTTPS
+        httpOnly: true            // Ensure it's not accessible via client-side JavaScript
+    });
     res.send('cleared')
 })
 router.get('/getdproduct',async(req,res)=>{
