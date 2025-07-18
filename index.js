@@ -16,7 +16,7 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(paymentRouter);
 app.use(router);
 app.use(express.static('./build'))
-const port =process.env.PORT||5000;
+const port =process.env.PORT||10000;
 app.listen(port,()=>{
     console.log(`Our server is running at port ${port}`);
 })
